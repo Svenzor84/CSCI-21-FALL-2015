@@ -54,38 +54,38 @@ string goldilocks (string item, int number) {
 	if (item == "bed"){
 		switch (number) {
 			case 1:
-			return "This bed is too hard";
-			break;
+			  return "This bed is too hard";
+			  break;
 			case 2:
-			return "This bed is too soft";
-			break;
+			  return "This bed is too soft";
+			  break;
 			case 3:
-			return "This bed is just right";
-			break;
+			  return "This bed is just right";
+			  break;
 		}
 	} else if (item == "chair") {
 		switch (number) {
 			case 1:
-			return "This chair is too big";
-			break;
+			  return "This chair is too big";
+			  break;
 			case 2:
-			return "This chair is too small";
-			break;
+			  return "This chair is too small";
+			  break;
 			case 3:
-			return "This chair is just right";
-			break;
+			  return "This chair is just right";
+			  break;
 		}
 	} else if (item == "porridge") {
 		switch (number) {
 			case 1:
-			return "This porridge is too hot";
-			break;
+			  return "This porridge is too hot";
+			  break;
 			case 2:
-			return "This porridge is too cold";
-			break;
+			  return "This porridge is too cold";
+			  break;
 			case 3:
-			return "This porridge is just right";
-			break;
+			  return "This porridge is just right";
+			  break;
 		}
 	}
  }
@@ -109,38 +109,47 @@ int rockScissorPaper (char playerOne, char playerTwo) {
 	if (toupper(playerOne) == 'R'){
 		switch (toupper(playerTwo)){
 			case 'R':
-			return 3;
-			break;
+			  return 3;
+		   	  break;
 			case 'S':
-			return 1;
-			break;
+			  return 1;
+			  break;
 			case 'P':
-			return 2;
-			break;
+			  return 2;
+			  break;
+			default:
+			  return 0;
+			  break;
 		}
 	} else if (toupper(playerOne) == 'P'){
 		switch (toupper(playerTwo)){
 			case 'R':
-			return 1;
-			break;
+			  return 1;
+			  break;
 			case 'S':
-			return 2;
-			break;
+			  return 2;
+			  break;
 			case 'P':
-			return 3;
-			break;
+			  return 3;
+			  break;
+			default:
+			  return 0;
+			  break;
 		}
 	} else if (toupper(playerOne) == 'S'){
 		switch (toupper(playerTwo)){
 			case 'R':
-			return 2;
-			break;
+			  return 2;
+			  break;
 			case 'P':
-			return 1;
-			break;
+			  return 1;
+			  break;
 			case 'S':
-			return 3;
-			break;
+			  return 3;
+			  break;
+			default:
+			  return 0;
+			  break;
 		}
 	} else {
 		return 0;
