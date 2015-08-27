@@ -1,6 +1,6 @@
 /*
  * Programming Challenge 3
- * Created by Steve Ross-Byers on 27 Aug
+ * Created by Steve Ross-Byers on 27 Aug 2015
  *
  */
 #include <cassert>
@@ -88,7 +88,6 @@ string goldilocks (string item, int number) {
 			break;
 		}
 	}
- 	
  }
 
 /*
