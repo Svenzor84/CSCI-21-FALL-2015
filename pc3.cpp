@@ -37,7 +37,7 @@ int main (int argc, char* argv[]) {
  * <li>item: "porridge", number: 2, return "This porridge is too cold"</li>
  * <li>item: "porridge", number: 3, return "This porridge is just right"</li>
  * <li>item: "chair", number: 1, return "This chair is too big"</li>
- * <li>item: "chair", number: 2, return "This chair is too big"</li>
+ * <li>item: "chair", number: 2, return "This chair is too small"</li>
  * <li>item: "chair", number: 3, return "This chair is just right"</li>
  * <li>item: "bed", number: 1, return "This bed is too hard"</li>
  * <li>item: "bed", number: 2, return "This bed is too soft"</li>
@@ -51,6 +51,16 @@ int main (int argc, char* argv[]) {
  */
 string goldilocks (string item, int number) {
 	// CODE HERE
+	//First check for valid arguments and change to default values if needed
+	if ((item != "bed") && (item != "porridge") && (item != "chair")){
+		item = "bed";
+	} else {
+	}
+	if ((number != 1) && (number != 2) && (number != 3)){
+		number = 3;
+	} else {
+	}
+	//Now check variables for proper return value
 	if (item == "bed"){
 		switch (number) {
 			case 1:
@@ -164,6 +174,8 @@ int rockScissorPaper (char playerOne, char playerTwo) {
  */
 int asciiValue (char c) {
 	// CODE HERE
+	int asciiValue = c;
+	return asciiValue;
 }
 
 /*
@@ -173,6 +185,11 @@ int asciiValue (char c) {
  */
 string toLower (string input) {
 	// CODE HERE
+	string output = input;
+	for (int i = input.length() - 1; i > -1; i--){
+		output.at(i) = tolower(output.at(i));
+	}
+	return output;
 }
 
 /*
@@ -182,6 +199,11 @@ string toLower (string input) {
  */
 string toUpper (string input) {
 	// CODE HERE
+	string output = input;
+	for (int i = input.length() - 1; i > -1; i--){
+		output.at(i) = toupper(output.at(i));
+	}
+	return output;
 }
 
 /*
@@ -195,6 +217,8 @@ string toUpper (string input) {
  */
 char getCharacter (string input, int charIndex) {
 	// CODE HERE
+	char characterOutput = input.at(charIndex);
+	return characterOutput;
 }
 
 /*
