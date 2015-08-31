@@ -5,7 +5,7 @@
 # Programmer: Steve Ross-Byers
 #
 
-# Target for programming challenge 3
+# Target for programming challenge 1
 # Date completed: 9-1-2015
 pc1: pc1.cpp.cpp
 	g++ -o pc1 pc1.cpp
