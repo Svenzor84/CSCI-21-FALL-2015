@@ -1,5 +1,6 @@
 /*
  * Programming Challenge 1
+ * Created by Steve Ross-Byers on Aug 25
  */
 #include <cassert>
 #include <iostream>
