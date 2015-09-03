@@ -51,10 +51,10 @@ int main (int argc, char* argv[]) {
 string makeString (string label, double value, char separator) {
 	// CODE HERE
 	string outputString;
-	ostringstream oss;
+	stringstream ss;
 	
-	oss << label << ' ' << separator << ' ' << value;
-	outputString = oss.str();
+	ss << label << " " << separator << " " << value;
+	outputString = ss.str();
 	
 	return outputString;
 }
