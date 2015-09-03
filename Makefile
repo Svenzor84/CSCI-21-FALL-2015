@@ -19,3 +19,8 @@ pc2: pc2.cpp
 # Date completed: 9-1-2015
 pc3: pc3.cpp
 	g++ -o pc3 pc3.cpp
+	
+# Target for programming challenge 4
+# Date completed: 9-1-2015
+pc4: pc4.cpp
+	g++ -o pc4 pc4.cpp
