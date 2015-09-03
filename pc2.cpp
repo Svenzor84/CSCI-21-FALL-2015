@@ -1,6 +1,6 @@
 /*
  * Programming Challenge 2
- * Created By Steve Ross-Byers on 26 Aug
+ * Created By Steve Ross-Byers on 26 Aug 2015
  *
  */
 #include <cassert>
