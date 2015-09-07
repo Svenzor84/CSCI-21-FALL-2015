@@ -118,7 +118,6 @@ int getStats(string s, int &alphaCount,int &digitCount) {
 	alphaCount = 0;
 	digitCount = 0;
 	for (int i = 0; i < s.length(); i++) {
-		//if ((isdigit(s.at(i)) == false) && (isspace(s.at(i)) == false)){
 		if (isalpha(s.at(i))){
 			alphaCount++;
 		}
