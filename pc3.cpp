@@ -54,11 +54,9 @@ string goldilocks (string item, int number) {
 	//First check for valid arguments and change to default values if needed
 	if ((item != "bed") && (item != "porridge") && (item != "chair")){
 		item = "bed";
-	} else {
 	}
 	if ((number != 1) && (number != 2) && (number != 3)){
 		number = 3;
-	} else {
 	}
 	//Now check variables for proper return value
 	if (item == "bed"){
