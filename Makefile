@@ -39,3 +39,13 @@ pc6: pc6.cpp
 # Date completed: 9-13-2015
 pc7: pc7.cpp
 	g++ -o pc7 pc7.cpp
+	
+	
+	
+	
+	
+	
+# Target for programming project 1
+# Date completed: 9-13-2015
+project1: project1.cpp
+	g++ -o project1 project1.cpp
