@@ -1,5 +1,6 @@
 /*
  * Programming Challenge 7
+ * Created by Steve Ross-Byers on Sept 13 2015
  */
 #include <cassert>
 #include <fstream>
