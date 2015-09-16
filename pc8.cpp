@@ -55,7 +55,7 @@ void processArguments (int argc, char* argv[]) {
 	//loop ignores index 0 because that is the name of the array
 	for (int i = 1; i < argc; i++){
 		stringstream ss;
-		int index;
+		int index = 0;
 		ss << argv[i];
 		ss >> index;
 		switch (index){
