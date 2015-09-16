@@ -98,7 +98,7 @@ bool hasValue (int values[], int size, int value){
 
 int valueAt (int values[], int size, int index, bool& error){
 	error = true;
-	if ((index < size) && (values[index] > 0)){
+	if ((index < size) && (index > -1)){
 		error = false;
 		return values[index];
 	} else {
