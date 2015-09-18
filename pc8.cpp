@@ -59,22 +59,22 @@ void processArguments (int argc, char* argv[]) {
 		ss << argv[i];
 		ss >> index;
 		switch (index){
-			case 10:
+		  case 10:
 			onTen();
 			break;
-			case 20:
+		  case 20:
 			onTwenty();
 			break;
-			case 30:
+		  case 30:
 			onThirty();
 			break;
-			case 40:
+		  case 40:
 			onForty();
 			break;
-			case 50:
+		  case 50:
 			onFifty();
 			break;
-			default:
+		  default:
 			onError();
 			break;
 		}
