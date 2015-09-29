@@ -68,7 +68,7 @@ class SecretDoor
 		 * Get this SecretDoor's Prize.
 		 * @return the Prize, by reference, "hidden behind" this SecretDoor
 		 */
-		Prize getPrize();
+		Prize& getPrize();
 		
 	private:
 	
@@ -121,7 +121,7 @@ unsigned int SecretDoor::getNumber(){
 	return number;
 }
 
-Prize SecretDoor::getPrize(){
+Prize& SecretDoor::getPrize(){
 	return prize;
 }
 
