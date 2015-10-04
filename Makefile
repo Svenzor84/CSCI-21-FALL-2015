@@ -65,6 +65,11 @@ pc11: pc11.cpp
 pc12: pc12.cpp
 	g++ -o pc12 pc12.cpp
 
+# Target for programming challenge 13
+# Date completed: 10-1-2015
+pc13: pc13.cpp
+	g++ -o pc13 pc13.cpp
+
 # Target for programming project 1
 # Date completed: 9-13-2015
 project1: project1.cpp
