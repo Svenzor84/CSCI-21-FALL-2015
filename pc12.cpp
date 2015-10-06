@@ -77,8 +77,10 @@ int* makeDynoIntArray (unsigned int size){
 
 //clear the memory of the dynamic array and NULL the pointer
 void clearDynoIntArray (int*& theArray){
-	delete [] theArray;
-	theArray = NULL;
+	if (theArray != NULL){
+		delete [] theArray;
+		theArray = NULL;
+	}
 }
 
 //return the sum of the dynamic array unless NULL array exception is thrown
