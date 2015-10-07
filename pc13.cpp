@@ -80,8 +80,11 @@ string* makeDynoString (string contents){
 }
 
 void clearDynoString (string*& theString){
-	delete theString;
-	theString = NULL;
+	if (theString != NULL){
+		delete theString;
+		theString = NULL;
+	}
+	
 }
 
 unsigned int countChars (string* theString, unsigned int& alpha, unsigned int& num){
