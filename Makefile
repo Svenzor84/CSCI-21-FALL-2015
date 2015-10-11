@@ -100,7 +100,7 @@ prize.o: prize.cpp
 	g++ -c prize.cpp
 	
 clean:
-	rm *.o
+	rm box.o prize.o project2.o
 	
 cleanall:
-	rm *.o project2
+	rm box.o prize.o project2.o project2
