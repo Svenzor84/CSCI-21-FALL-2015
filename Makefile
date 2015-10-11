@@ -85,7 +85,7 @@ pc15: pc15.cpp
 project1: project1.cpp
 	g++ -o project1 project1.cpp
 	
-# Target for programming project 2 (with individual objects and clean options)
+# Targets for programming project 2 (with individual objects and clean options)
 # Date completed: 10-11-2015
 project2: project2.o box.o prize.o
 	g++ -o project2 project2.o box.o prize.o
