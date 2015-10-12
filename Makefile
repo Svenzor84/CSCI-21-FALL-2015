@@ -87,17 +87,17 @@ project1: project1.cpp
 	
 # Targets for programming project 2 (with individual objects and clean options)
 # Date completed: 10-11-2015
-project2: project2.o box.o prize.o
+project2: project2.o prize.o box.o
 	g++ -o project2 project2.o box.o prize.o
 	
 project2.o: project2.cpp
 	g++ -c project2.cpp
-	
-box.o: box.cpp
-	g++ -c box.cpp
-	
+
 prize.o: prize.cpp
 	g++ -c prize.cpp
+
+box.o: box.cpp
+	g++ -c box.cpp
 	
 clean:
 	rm box.o prize.o project2.o
