@@ -4,6 +4,8 @@
  * Steve Ross-Byers
  * Date created: 10/12/2015
  * Last date modified: 10/11/2015
+ *
+ * Sources: CinReader by Boyd Trolinger
  */
 
 #include "box.h"
