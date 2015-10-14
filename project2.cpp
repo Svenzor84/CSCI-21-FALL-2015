@@ -100,13 +100,15 @@ void menu() {
              << "[H] Change the Color of the Custom Box\n"
              << "[I] Add the Default Prize to the Custom Box\n"
              << "[J] Add the Custom Prize to the Custom Box\n"
-             << "[K] Overwrite the Custom Prize with a Prize from the Custom Box\n"
+             << "[K] List all the Prizes in the Custom Box\n"
              << "[L] Remove a Specific Prize from the Custom Box\n"
              << "[M] Compare two Prizes from the Custom Box\n"
              << "        [Q] to Quit the Interactive Test\n"
              << " ";
         user_choice = reader.readChar("AaBbCcDdEeFfGgHhIiJjKkLlMmNnQq");
         switch (toupper(user_choice)){
+            
+            //Display Name and Value of prize1
             case 'A':
                 clearScreen();
                 cout << "Default Prize\n" 
@@ -115,6 +117,8 @@ void menu() {
                 enterToContinue();
                 clearScreen();
                 break;
+                
+            //Display Name and Value of prize2
             case 'B':
                 clearScreen();
                 cout << "Custom Prize\n" 
@@ -123,6 +127,8 @@ void menu() {
                 enterToContinue();
                 clearScreen();
                 break;
+                
+            //Change the name of prize2
             case 'C':
                 clearScreen();
                 cout << "Enter the New Name for the Custom Prize: "; 
@@ -134,37 +140,45 @@ void menu() {
                 enterToContinue();
                 clearScreen();
                 break;
+                
+            //Change the value of prize2
             case 'D':
-            clearScreen();
-            cout << "Enter a New Value for the Custom Prize: ";
-            prize2.setPrizeValue(reader.readInt(0));
-            clearScreen();
-            cout << "Custom Prize\n" 
-                 << "-Name: " << prize2.getPrizeName() << "\n"
-                 << "-Value: " << prize2.getPrizeValue() << endl;
-            enterToContinue();
-            clearScreen();
+                clearScreen();
+                cout << "Enter a New Value for the Custom Prize: ";
+                prize2.setPrizeValue(reader.readInt(0));
+                clearScreen();
+                cout << "Custom Prize\n" 
+                     << "-Name: " << prize2.getPrizeName() << "\n"
+                     << "-Value: " << prize2.getPrizeValue() << endl;
+                enterToContinue();
+                clearScreen();
                 break;
+                
+            //Display the Number, Color, and Capacity of box1
             case 'E':
-            clearScreen();
-            cout << "Default Box\n" 
-                 << "-Number: " << box1.getBoxNumber() << "\n"
-                 << "-Color: " << box1.getBoxColor() << "\n"
-                 << "-Prize Count: " << box1.getPrizeCount() << "\n"
-                 << "-Prize Capacity: " << box1.getPrizeCapacity() << endl;
-            enterToContinue();
-            clearScreen();
+                clearScreen();
+                cout << "Default Box\n" 
+                     << "-Number: " << box1.getBoxNumber() << "\n"
+                     << "-Color: " << box1.getBoxColor() << "\n"
+                     << "-Prize Count: " << box1.getPrizeCount() << "\n"
+                     << "-Prize Capacity: " << box1.getPrizeCapacity() << endl;
+                enterToContinue();
+                clearScreen();
                 break;
+                
+            //Display the Number, Color, and Capacity of box2
             case 'F':
-            clearScreen();
-            cout << "Custom Box\n" 
-                 << "-Number: " << box2.getBoxNumber() << "\n"
-                 << "-Color: " << box2.getBoxColor() << "\n"
-                 << "-Prize Count: " << box2.getPrizeCount() << "\n"
-                 << "-Prize Capacity: " << box2.getPrizeCapacity() << endl;
-            enterToContinue();
-            clearScreen();
+                clearScreen();
+                cout << "Custom Box\n" 
+                     << "-Number: " << box2.getBoxNumber() << "\n"
+                     << "-Color: " << box2.getBoxColor() << "\n"
+                     << "-Prize Count: " << box2.getPrizeCount() << "\n"
+                     << "-Prize Capacity: " << box2.getPrizeCapacity() << endl;
+                enterToContinue();
+                clearScreen();
                 break;
+                
+            //Change the number of of box2
             case 'G':
                 clearScreen();
                 cout << "Enter a New Number for the Custom Box: ";
@@ -178,6 +192,8 @@ void menu() {
                 enterToContinue();
                 clearScreen();
                 break;
+                
+            //Change the color of box2
             case 'H':
                 clearScreen();
                 cout << "Enter a New Color for the Custom Box: ";
@@ -191,67 +207,88 @@ void menu() {
                 enterToContinue();
                 clearScreen();
                 break;
+                
+            //Add prize1 to box2 if there is room
             case 'I':
                 clearScreen();
-                box2.addPrize(prize1);
-                cout << "***The Default Prize has been Added to the Custom Box.\n"
-                     << "Custom Box\n" 
-                     << "-Number: " << box2.getBoxNumber() << "\n"
-                     << "-Color: " << box2.getBoxColor() << "\n"
-                     << "-Prize Count: " << box2.getPrizeCount() << "\n"
-                     << "-Prize Capacity: " << box2.getPrizeCapacity() << endl;
+                if (box2.getPrizeCount() < box2.getPrizeCapacity()){
+                    box2.addPrize(prize1);
+                    cout << "***The Default Prize has been Added to the Custom Box.\n"
+                         << "Custom Box\n" 
+                         << "-Number: " << box2.getBoxNumber() << "\n"
+                         << "-Color: " << box2.getBoxColor() << "\n"
+                         << "-Prize Count: " << box2.getPrizeCount() << "\n"
+                         << "-Prize Capacity: " << box2.getPrizeCapacity() << endl;
+                } else {
+                    cout << "The Box is full, remove a Prize to Add a new Prize.\n";
+                }
                 enterToContinue();
                 clearScreen();
                 break;
+                
+            //Add prize2 to box2 if there is room
             case 'J':
                 clearScreen();
-                box2.addPrize(prize2);
-                cout << "***The Custom Prize has been Added to the Custom Box.\n"
-                     << "Custom Box\n" 
-                     << "-Number: " << box2.getBoxNumber() << "\n"
-                     << "-Color: " << box2.getBoxColor() << "\n"
-                     << "-Prize Count: " << box2.getPrizeCount() << "\n"
-                     << "-Prize Capacity: " << box2.getPrizeCapacity() << endl;
+                if (box2.getPrizeCount() < box2.getPrizeCapacity()){
+                    box2.addPrize(prize2);
+                    cout << "***The Custom Prize has been Added to the Custom Box.\n"
+                         << "Custom Box\n" 
+                         << "-Number: " << box2.getBoxNumber() << "\n"
+                         << "-Color: " << box2.getBoxColor() << "\n"
+                         << "-Prize Count: " << box2.getPrizeCount() << "\n"
+                         << "-Prize Capacity: " << box2.getPrizeCapacity() << endl;
+                } else {
+                    cout << "The Box is full, remove a Prize to Add a new Prize.\n";
+                }
                 enterToContinue();
                 clearScreen();
                 break;
+                
+            //Display the name and value of each prize in box2
             case 'K':
                 clearScreen();
-                cout << "Replace the Custom Prize with which Prize from the Custom Box?\n"
-                     << "(1 for first prize, 2 for second prize, etc)" << endl;
-                prize2 = box2.getPrize((reader.readInt(1, box2.getPrizeCount())) - 1);
-                cout << "New Custom Prize\n" 
-                     << "-Name: " << prize2.getPrizeName() << "\n"
-                     << "-Value: " << prize2.getPrizeValue() << endl;
+                for (int i = 0; i < box2.getPrizeCount(); i++){
+                    cout << "-Name: " << box2.getPrize(i).getPrizeName() << "\n"
+                         << "-Value: " << box2.getPrize(i).getPrizeValue() << "\n" << endl;
+                }
                 enterToContinue();
                 clearScreen();
                 break;
+                
+            //Remove a specific prize from box2, if there are prizes to remove
             case 'L':
                 clearScreen();
-                cout << "Which Prize would you like to Remove?\n"
-                     << "(1 for first prize, 2 for second prize, etc)" << endl;
-                box2.removePrize((reader.readInt(1, box2.getPrizeCount())) - 1);
-                clearScreen();
-                cout << "***The Prize has been Removed from the Custom Box.\n"
-                     << "Custom Box\n" 
-                     << "-Number: " << box2.getBoxNumber() << "\n"
-                     << "-Color: " << box2.getBoxColor() << "\n"
-                     << "-Prize Count: " << box2.getPrizeCount() << "\n"
-                     << "-Prize Capacity: " << box2.getPrizeCapacity() << endl;
+                if (box2.getPrizeCount() > 0){
+                    cout << "Which Prize would you like to Remove?\n"
+                         << "(1 for first prize, 2 for second prize, etc)" << endl;
+                    box2.removePrize((reader.readInt(1, box2.getPrizeCount())) - 1);
+                    clearScreen();
+                    cout << "***The Prize has been Removed from the Custom Box.\n"
+                         << "Custom Box\n" 
+                         << "-Number: " << box2.getBoxNumber() << "\n"
+                         << "-Color: " << box2.getBoxColor() << "\n"
+                         << "-Prize Count: " << box2.getPrizeCount() << "\n"
+                         << "-Prize Capacity: " << box2.getPrizeCapacity() << endl;
+                } else {
+                    cout << "There are no Prizes to Remove.  Add a Prize to Remove it.\n";
+                }
                 enterToContinue();
                 clearScreen();
                 break;
+                
+            //Compare two prizes from box2, if there are any prizes in box2
             case 'M':
                 if (box2.getPrizeCount() > 0) {
+                    int choice1 = 0, choice2 = 0;
                     clearScreen();
                     cout << "Select a Prize to Compare (from Custom Box)\n"
                          << "(1 for first prize, 2 for second prize, etc)" << endl;
-                    Prize prize4 = box2.getPrize((reader.readInt(1, box2.getPrizeCount())) - 1);
+                    choice1 = reader.readInt(1, box2.getPrizeCount());
                     cout << "Select another Prize to Compare (from Custom Box)\n"
                          << "(1 for first prize, 2 for second prize, etc)" << endl;
-                    Prize prize5 = box2.getPrize((reader.readInt(1, box2.getPrizeCount())) - 1);
+                    choice2 = reader.readInt(1, box2.getPrizeCount());
                     clearScreen();
-                    if (prize4 == prize5) {
+                    if (box2.getPrize(choice1 - 1) == box2.getPrize(choice2 - 1)) {
                         cout << "These Prizes are the same!!!" << endl;
                         enterToContinue();
                         clearScreen();
@@ -268,6 +305,8 @@ void menu() {
                     clearScreen();
                 }
                 break;
+                
+            //Quit the interactive test
             case 'Q':
                 clearScreen();
                 cout << "Thank you for running this program!\n";
