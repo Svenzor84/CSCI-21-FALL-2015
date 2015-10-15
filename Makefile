@@ -5,6 +5,8 @@
 # Programmer: Steve Ross-Byers
 #
 
+FLAGS = -Wall -Wextra -pedantic
+
 # Target for programming challenge 1
 # Date completed: 8-25-2015
 pc1: pc1.cpp
