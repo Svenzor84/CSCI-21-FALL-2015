@@ -6,6 +6,8 @@
  * Last date modified: 10/11/2015
  */
   
+#pragma once 
+ 
 #include <cstdlib>
 #include <iostream>
 #include <string>
