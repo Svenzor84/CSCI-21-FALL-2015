@@ -105,7 +105,7 @@ CinReader.o: CinReader.cpp
 	g++ $(FLAGS) -c CinReader.cpp
 
 clean:
-	rm *.o
+	rm -f *.o
 	
-cleanall:
-	rm project2 *.o
+cleanall: clean
+	rm -f project2
