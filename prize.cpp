@@ -37,9 +37,9 @@
      prizeName = newPrizeName;
  }
  
- bool operator==(Prize p1, Prize p2){
-     if (p1.prizeValue == p2.prizeValue){
-         if (p1.prizeName == p2.prizeName){
+ bool operator==(const Prize& lp, const Prize& rp){
+     if (lp.prizeValue == rp.prizeValue){
+         if (lp.prizeName == rp.prizeName){
              return true;
          } else {
              return false;

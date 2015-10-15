@@ -63,7 +63,7 @@ class Prize {
          * @return true if the compared Prize objects have equivalent prizeName and prizeValues
          *  otherwise return false
          */
-         friend bool operator==(Prize p1, Prize p2);
+         friend bool operator==(const Prize& lp, const Prize& rp);
          
     private:
         string prizeName;
