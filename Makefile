@@ -90,19 +90,19 @@ project1: project1.cpp
 # Targets for programming project 2 (with individual objects and clean options)
 # Date completed: 10-11-2015
 project2: project2.o prize.o box.o CinReader.o
-	g++ -o project2 project2.o box.o prize.o CinReader.o
+	g++ -o project2 $(FLAGS) project2.o box.o prize.o CinReader.o
 	
 project2.o: project2.cpp
-	g++ -c project2.cpp
+	g++ $(FLAGS) -c project2.cpp
 
 prize.o: prize.cpp
-	g++ -c prize.cpp
+	g++ $(FLAGS) -c prize.cpp
 
 box.o: box.cpp
-	g++ -c box.cpp
+	g++ $(FLAGS) -c box.cpp
 	
 CinReader.o: CinReader.cpp
-	g++ -c CinReader.cpp
+	g++ $(FLAGS) -c CinReader.cpp
 
 clean:
 	rm *.o
