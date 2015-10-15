@@ -8,12 +8,12 @@
  
  #include "box.h"
  
- Box::Box() : boxNumber(0), boxColor("NO COLOR"), prizeCapacity(5), prizeCount(0) {
+ Box::Box() : boxNumber(0), prizeCapacity(5), prizeCount(0), boxColor("NO COLOR") {
      prizes = new Prize[prizeCapacity];
  }
  
  Box::Box(unsigned int newBoxNumber, string newBoxColor, unsigned int newPrizeCapacity) 
-        : boxNumber(newBoxNumber), boxColor(newBoxColor), prizeCapacity(newPrizeCapacity), prizeCount(0) {
+        : boxNumber(newBoxNumber), prizeCapacity(newPrizeCapacity), prizeCount(0), boxColor(newBoxColor) {
      prizes = new Prize[prizeCapacity];
  }
  

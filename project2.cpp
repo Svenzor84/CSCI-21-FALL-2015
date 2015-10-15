@@ -31,7 +31,7 @@ template <typename X, typename A>
 void btassert(A assertion);
 void unittest ();
 
-int main (int argc, char* argv[]) {
+int main () {
     unittest();
 	
 	enterToContinue();
@@ -247,7 +247,7 @@ void menu() {
             //Display the name and value of each prize in box2
             case 'K':
                 clearScreen();
-                for (int i = 0; i < box2.getPrizeCount(); i++){
+                for (unsigned int i = 0; i < box2.getPrizeCount(); i++){
                     cout << "-Name: " << box2.getPrize(i).getPrizeName() << "\n"
                          << "-Value: " << box2.getPrize(i).getPrizeValue() << "\n" << endl;
                 }
