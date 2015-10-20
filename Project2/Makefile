@@ -1,4 +1,4 @@
-# Makefile for programming challenges
+# Makefile for Programming Project 2
 #
 # CSCI 21, Fall 2015
 #
