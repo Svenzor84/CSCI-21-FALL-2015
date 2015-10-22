@@ -17,7 +17,7 @@
  }
  
  SLNode::~SLNode(){
-         nextNode = NULL;
+     nextNode = NULL;
  }
  
  void SLNode::setContents(int newContents){
