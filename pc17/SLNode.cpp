@@ -5,9 +5,7 @@
  * Date created: 10/20/2015
  * Last date modified: 10/20/2015
  */
- 
- #include <stddef.h>
- 
+
  #include "SLNode.h"
  
  SLNode::SLNode() : nextNode(NULL), contents(0) {
