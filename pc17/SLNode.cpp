@@ -11,18 +11,13 @@
  #include "SLNode.h"
  
  SLNode::SLNode() : nextNode(NULL), contents(0) {
-     
  }
  
  SLNode::SLNode(int customContents) : nextNode(NULL), contents(customContents){
-     
  }
  
  SLNode::~SLNode(){
-     if (nextNode != NULL){
-         delete nextNode;
          nextNode = NULL;
-     }
  }
  
  void SLNode::setContents(int newContents){
