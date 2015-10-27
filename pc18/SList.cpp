@@ -7,7 +7,6 @@
  */
 
 #include "SList.h"
-#include <sstream>
 
 SList::SList()
 : head(NULL), size(0)
@@ -17,12 +16,12 @@ SList::~SList(){
     clear();
 }
 
-void SList::insertHead(int nodeContents) {
+void SList::insertHead(int headContents) {
     if (head == NULL){
-        head = new SLNode(nodeContents);
+        head = new SLNode(headContents);
     } else {
         SLNode* oldHead = head;
-        head = new SLNode(nodeContents);
+        head = new SLNode(headContents);
         head->setNextNode(oldHead);
         oldHead = NULL;
     }
@@ -56,7 +55,6 @@ unsigned int SList::getSize() const{
 }
 
 string SList::toString() const {
-    string listContents;
     stringstream ss;
     if (head != NULL){
         ss << head->getContents();
@@ -71,6 +69,5 @@ string SList::toString() const {
             }
         }
     }
-    ss >> listContents;
-    return listContents;
+    return ss.str();
 }

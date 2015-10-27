@@ -9,6 +9,7 @@
 #pragma once
 
 #include <string>
+#include <sstream>
 #include "SLNode.h"
 
 class SList {
@@ -40,7 +41,7 @@ class SList {
          * Function to create an SLNode and attatch it to the beginning of the list
          * @param nodeContents assigns this value to the node that is created
          */
-        void insertHead(int nodeContents);
+        void insertHead(int headContents);
         
         /*
          * Function to remove the first (head) node of the list
