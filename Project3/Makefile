@@ -8,7 +8,7 @@
 FLAGS = -Wall -Wextra -pedantic
 
 # Targets for programming project 3
-# Date completed: 11-4-2015
+# Date completed: 11-6-2015
 project3: project3.o DLList.o DLNode.o
 	g++ -o project3 $(FLAGS) project3.o DLList.o DLNode.o
 	
