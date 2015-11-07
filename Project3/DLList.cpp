@@ -3,7 +3,7 @@
  *
  * Steve Ross-Byers
  * Date created: 11/4/2015
- * Last date modified: 11/5/2015
+ * Last date modified: 11/6/2015
  */
 
 #include "DLList.h"
@@ -196,17 +196,17 @@ unsigned int DLList::getSize() const {
     return count;
 }
 
-unsigned int DLList::getFront() const {
+int DLList::getFront() const {
     if (head == NULL) {
-        throw "LIST EMPTY";
+        throw string("LIST EMPTY");
     } else {
         return head->getContents();
     }
 }
 
-unsigned int DLList::getBack() const {
+int DLList::getBack() const {
     if (tail == NULL) {
-        throw "LIST EMPTY";
+        throw string("LIST EMPTY");
     } else {
         return tail->getContents();
     }

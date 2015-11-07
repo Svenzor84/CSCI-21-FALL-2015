@@ -3,7 +3,7 @@
  *
  * Steve Ross-Byers
  * Date created: 11/4/2015
- * Last date modified: 11/5/2015
+ * Last date modified: 11/6/2015
  */
 
 #pragma once
@@ -94,15 +94,15 @@ class DLList {
         
         /*
          * Head getter
-         * @return an unsigned int containing the value stored in the head node
+         * @return an int containing the value stored in the head node
          */
-        unsigned int getFront() const;
+        int getFront() const;
         
         /*
          * Tail getter
-         * @return an unsigned int containing the value stored in the tail node
+         * @return an int containing the value stored in the tail node
          */
-        unsigned int getBack() const;
+        int getBack() const;
         
         /*
          * Function that concatenates the contents of the entire list into a string
