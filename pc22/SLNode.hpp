@@ -34,7 +34,7 @@ class SLNode {
          * SLNode default Constructor
          */
         SLNode()
-        : nextNode(NULL), contents(0)
+        : nextNode(NULL)
         {}
         
         /*
