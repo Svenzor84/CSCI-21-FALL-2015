@@ -61,33 +61,13 @@
 	        return false;
 	    }
 	    if (node->getContents() == contents) {
-	        BSTNode* toRemove = node;
 	        if (node->getLeftChild() == NULL) {
+	            BSTNode* toRemove = node;
 	            node = node->getRightChild();
-	            if (root == toRemove) {
-	                root = node;
-	            }
-	        } else if (node->getRightChild() == NULL) {
-	            node = node->getLeftChild();
-	            if (root == toRemove) {
-	                root = node;
-	            }
+	            delete toRemove;
 	        } else {
-	            toRemove = node->getLeftChild();
-	            if (toRemove->getRightChild() == NULL) {
-	                node->setContents(toRemove->getContents());
-	                node->setLeftChild(toRemove->getLeftChild());
-	            } else {
-	                BSTNode* parent = NULL;
-	                do {
-	                    parent = toRemove;
-	                    toRemove = toRemove->getRightChild();
-	                } while (toRemove->getRightChild() != NULL);
-	                node->setContents(toRemove->getContents());
-	                parent->setRightChild(toRemove->getLeftChild());
-	            }
+	            removeMax(node->getContents(), node->getLeftChild());
 	        }
-	        delete toRemove;
 	        size--;
 	        return true;
 	    }
@@ -99,7 +79,14 @@
 	}
 	            
 	void BSTree::removeMax(int& contents, BSTNode*& node) {
-	    
+	    if (node->getRightChild() == NULL) {
+	        BSTNode* tempNode = node;
+	        contents = node->getContents();
+	        node = node->getLeftChild();
+	        delete tempNode;
+	    } else {
+	        removeMax(contents, node->getRightChild());
+	    }
 	}
 	               
  void BSTree::clear(BSTNode*& node) {
