@@ -2,6 +2,8 @@
  * Programming Challenge 28
  */
 #define CATCH_CONFIG_MAIN
+
+//Decided not to change the include, so catch.hpp is hosted in the root directory
 #include "../catch.hpp"
 
 #include "Item.h"
