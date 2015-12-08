@@ -1,4 +1,10 @@
-/* NOTES
+/*
+ * Programming Challenge 29
+ * Steve Ross-Byers
+ * Date created: 12/7/2015
+ * Last date modified: 12/7/2015
+ *
+ * NOTES
  *
  * need to add std=c++11 to compiler flags
  * add code for each numbered item in each of the unit tests
